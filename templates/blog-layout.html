@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blog layout</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<body>
+	
+<style>
+
+#overlay-ad .image{
+  position:relative;
+}
+#overlay-ad {
+  position: fixed;
+  text-align: center;
+  top: 0;
+right:0;
+  height: 100%;
+  width: 100%;
+  z-index: 9999;
+  min-height: 500px;
+}
+#overlay-ad .wrap {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  height: 100vh;
+}
+#overlay-ad:before {
+  content: '';
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.8);
+}
+#overlay-ad .icon-close {
+  color: #fff;
+  cursor: pointer;
+  float: right;
+  height: 28px;
+  width: 28px;
+  border: 1px solid #fff;
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  border-radius: 50%;
+  line-height: 1.8;
+  background: #ff0000;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+.icon-close span{
+  position: absolute;
+  font-size: 0.8em;
+  left: 6px;
+}
+</style>
+<div id="overlay-ad" onclick="hideOverlay();">
+ <div class="wrap">
+	<div class="image">
+	   <span style="font-family: Arial; font-size:12px;display:block;text-align:left;color:#ccc">Advertisement</span>
+	   <div class="bg-lightgray  text-center ">
+		  <a target="_blank" href='https://farmer.gov.in/'>
+			  <img src="img7.jpg" class="img-responsive">
+		  </a>
+	   </div>
+	   <i class="icon-close" onclick="hideOverlay();"><span>X</span></i>
+	</div>
+ </div>
+</div>
+<script>
+function hideOverlay(){
+	  document.getElementById('overlay-ad').style.display = 'none';
+  }
+
+</script>
+
+	
+
+
+ <header>
+ 	<h1>News and Announcements</h1>
+ </header>
+ <div class="row">
+ 	<div class="left-column">
+ 	  <div class="card">
+ 		<h2>NEW FARMER'S BILL 2020</h2>
+ 		<h5>Goverment annnounces the much awaited farmer's bill. what's in there for you? find out more details</h5>
+ 		<img src="img/bill.jpg" alt="blog "/>
+ 		<p>Details..</p>
+ 		
+ 	  </div>
+ 	  <div class="card">
+ 		<h2>BIOFLOCC-THE NEW WAY OF FISH FARMING</h2>
+ 		<h5>Bioflocc is sweeping the farming industry by storm!!</h5>
+ 		<img src="img/Fish-farming.jpg" alt="blog "/>
+ 		<p>Details..</p>
+ 		
+ 	  </div>
+ 	</div>
+
+ 	<div class="right-column">
+ 		<div class="card">
+ 			 <h2>Recent</h2>
+ 			 <img src="img/fertilisers.jpg" alt="me"/>
+ 			 <p>Current fertiliser prices near you.</p>
+ 		</div>
+ 		<div class="card">
+ 			 <h3>Archives</h3>
+ 			 <img src="img/pest.jpg" alt="Archives"/>
+ 			 <img src="img/cows.jpg" alt="Archives"/>
+ 			 <img src="img/rain.jpg" alt="Archives"/>
+ 		</div>
+ 		<div class="card">
+ 			<h3>Get more informations and updates</h3>
+ 			
+ 		</div>
+ 	</div>
+ </div>
+
+<footer>
+	<h2>Thank you</h2>
+</footer>
+
+</body>
+</head>
